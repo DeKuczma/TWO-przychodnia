@@ -46,16 +46,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="EdycjaLekarzy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="EdycjaLekarzy.Designer.cs">
+      <DependentUpon>EdycjaLekarzy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdycjaWizyty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdycjaWizyty.Designer.cs">
+      <DependentUpon>EdycjaWizyty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerowanieRaportu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerowanieRaportu.Designer.cs">
+      <DependentUpon>GenerowanieRaportu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdycjaPacjenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdycjaPacjenta.Designer.cs">
+      <DependentUpon>EdycjaPacjenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="SzukaniePacjenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SzukaniePacjenta.Designer.cs">
+      <DependentUpon>SzukaniePacjenta.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EdycjaLekarzy.resx">
+      <DependentUpon>EdycjaLekarzy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdycjaWizyty.resx">
+      <DependentUpon>EdycjaWizyty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerowanieRaportu.resx">
+      <DependentUpon>GenerowanieRaportu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdycjaPacjenta.resx">
+      <DependentUpon>EdycjaPacjenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +108,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SzukaniePAcjenta.resx">
+      <DependentUpon>SzukaniePacjenta.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -2,9 +2,14 @@ C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\b
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\bin\Debug\przychodnia.exe
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\bin\Debug\przychodnia.pdb
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.csprojAssemblyReference.cache
-C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.Form1.resources
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.Properties.Resources.resources
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.csproj.GenerateResource.cache
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.csproj.CoreCompileInputs.cache
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.exe
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.pdb
+C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.MainWindow.resources
+C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.EdycjaPacjenta.resources
+C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.EdycjaLekarzy.resources
+C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.EdycjaWizyty.resources
+C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.GenerowanieRaportu.resources
+C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.SzukaniePacjenta.resources

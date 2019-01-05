@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace przychodnia
 {
-    public partial class Form1 : Form
+    public partial class GenerowanieRaportu : Form
     {
-        public Form1()
+        public GenerowanieRaportu()
         {
             InitializeComponent();
         }
