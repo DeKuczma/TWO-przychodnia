@@ -31,11 +31,12 @@ namespace przychodnia
         {
             DataView dv = new DataView(this.przychodniaDataSet.Pacjenci);
             DataView viewDeklaracje = new DataView(this.przychodniaDataSet.Deklaracje);
-            dv.RowFilter = "Nazwisko = '" + textNazwisko.Text + "' AND PESEL = '" + textPESEL.Text + "'";
+            dv.RowFilter = this.przychodniaDataSet.Pacjenci.NazwiskoColumn.ColumnName+ " = '" + textNazwisko.Text + "' AND "
+                            + this.przychodniaDataSet.Pacjenci.PESELColumn.ColumnName + " = '" + textPESEL.Text + "'";
             if (dv.Count != 0)
             {
-                viewDeklaracje.RowFilter = "IDPacjenta = '" + dv[0][0] + "'";
-                viewDeklaracje.Sort = "Data DESC";
+                viewDeklaracje.RowFilter = this.przychodniaDataSet.Deklaracje.IdPacjentaColumn.ColumnName + " = '" + dv[0][0] + "'";
+                viewDeklaracje.Sort = this.przychodniaDataSet.Deklaracje.DataColumn.ColumnName + " DESC";
 
                 while (viewDeklaracje.Count > 1)
                     viewDeklaracje.Delete(1);

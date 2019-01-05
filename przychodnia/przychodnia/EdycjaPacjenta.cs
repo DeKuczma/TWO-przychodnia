@@ -38,14 +38,18 @@ namespace przychodnia
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            int pacientId = (int)dataGridView1.Rows[index].Cells[0].Value;
+            if (index >= 0)
+            {
+                int pacientId = (int)dataGridView1.Rows[index].Cells[0].Value;
 
-            StringBuilder sb = new StringBuilder();
-            sb.Append("IdPacjenta = '");
-            sb.Append(pacientId);
-            sb.Append("'");
-            wizytaView.RowFilter = sb.ToString();
-            deklaracjaView.RowFilter = sb.ToString();
+                StringBuilder sb = new StringBuilder();
+                sb.Append(this.przychodniaDataSet.Wizyty.IdPacjentaColumn);
+                sb.Append(" = '");
+                sb.Append(pacientId);
+                sb.Append("'");
+                wizytaView.RowFilter = sb.ToString();
+                deklaracjaView.RowFilter = sb.ToString();
+            }
         }
 
         private void butttonAccept_Click(object sender, EventArgs e)

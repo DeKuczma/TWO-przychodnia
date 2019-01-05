@@ -11,7 +11,6 @@ C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\o
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.EdycjaPacjenta.resources
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.EdycjaLekarzy.resources
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.EdycjaWizyty.resources
-C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.GenerowanieRaportu.resources
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.SzukaniePacjenta.resources
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\bin\Debug\Przychodnia.accdb
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\bin\Debug\PrzychodniaDataSet.Designer.cs

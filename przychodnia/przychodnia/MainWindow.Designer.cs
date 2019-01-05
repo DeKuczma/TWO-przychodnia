@@ -28,11 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonLekarze = new System.Windows.Forms.Button();
             this.buttonPacjent = new System.Windows.Forms.Button();
             this.buttonWizyty = new System.Windows.Forms.Button();
             this.buttonSerchPacjent = new System.Windows.Forms.Button();
             this.buttonRaport = new System.Windows.Forms.Button();
+            this.przychodniaDataSet = new przychodnia.PrzychodniaDataSet();
+            this.pacjenciTableAdapter = new przychodnia.PrzychodniaDataSetTableAdapters.PacjenciTableAdapter();
+            this.wizytyTableAdapter = new przychodnia.PrzychodniaDataSetTableAdapters.WizytyTableAdapter();
+            this.pacjenciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pacjenciDeklaracjeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacjenciBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacjenciDeklaracjeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLekarze
@@ -85,6 +94,29 @@
             this.buttonRaport.UseVisualStyleBackColor = true;
             this.buttonRaport.Click += new System.EventHandler(this.buttonRaport_Click);
             // 
+            // przychodniaDataSet
+            // 
+            this.przychodniaDataSet.DataSetName = "PrzychodniaDataSet";
+            this.przychodniaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pacjenciTableAdapter
+            // 
+            this.pacjenciTableAdapter.ClearBeforeFill = true;
+            // 
+            // wizytyTableAdapter
+            // 
+            this.wizytyTableAdapter.ClearBeforeFill = true;
+            // 
+            // pacjenciBindingSource
+            // 
+            this.pacjenciBindingSource.DataMember = "Pacjenci";
+            this.pacjenciBindingSource.DataSource = this.przychodniaDataSet;
+            // 
+            // pacjenciDeklaracjeBindingSource
+            // 
+            this.pacjenciDeklaracjeBindingSource.DataMember = "PacjenciDeklaracje";
+            this.pacjenciDeklaracjeBindingSource.DataSource = this.pacjenciBindingSource;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -100,6 +132,9 @@
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Przychodnia";
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacjenciBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacjenciDeklaracjeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -111,6 +146,11 @@
         private System.Windows.Forms.Button buttonWizyty;
         private System.Windows.Forms.Button buttonSerchPacjent;
         private System.Windows.Forms.Button buttonRaport;
+        private PrzychodniaDataSet przychodniaDataSet;
+        private PrzychodniaDataSetTableAdapters.PacjenciTableAdapter pacjenciTableAdapter;
+        private PrzychodniaDataSetTableAdapters.WizytyTableAdapter wizytyTableAdapter;
+        private System.Windows.Forms.BindingSource pacjenciBindingSource;
+        private System.Windows.Forms.BindingSource pacjenciDeklaracjeBindingSource;
     }
 }
 
