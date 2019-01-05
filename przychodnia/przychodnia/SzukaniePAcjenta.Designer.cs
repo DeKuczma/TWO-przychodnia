@@ -51,12 +51,12 @@
             this.pacjenciTableAdapter = new przychodnia.PrzychodniaDataSetTableAdapters.PacjenciTableAdapter();
             this.deklaracjeTableAdapter = new przychodnia.PrzychodniaDataSetTableAdapters.DeklaracjeTableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.pacjenciDeklaracjeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idPacjentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idLekarzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pozytywnaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pacjenciDeklaracjeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacjenciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet)).BeginInit();
@@ -245,11 +245,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(544, 93);
             this.dataGridView2.TabIndex = 7;
             // 
-            // pacjenciDeklaracjeBindingSource
-            // 
-            this.pacjenciDeklaracjeBindingSource.DataMember = "PacjenciDeklaracje";
-            this.pacjenciDeklaracjeBindingSource.DataSource = this.pacjenciBindingSource;
-            // 
             // iDDataGridViewTextBoxColumn1
             // 
             this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
@@ -285,6 +280,11 @@
             this.pozytywnaDataGridViewCheckBoxColumn.Name = "pozytywnaDataGridViewCheckBoxColumn";
             this.pozytywnaDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
+            // pacjenciDeklaracjeBindingSource
+            // 
+            this.pacjenciDeklaracjeBindingSource.DataMember = "PacjenciDeklaracje";
+            this.pacjenciDeklaracjeBindingSource.DataSource = this.pacjenciBindingSource;
+            // 
             // SzukaniePacjenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +298,7 @@
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.labelPESEL);
             this.Controls.Add(this.labelNazwisko);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "SzukaniePacjenta";
             this.Text = "Szukanie pacjenta";
             this.Load += new System.EventHandler(this.SzukaniePacjenta_Load);
