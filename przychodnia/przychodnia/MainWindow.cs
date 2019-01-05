@@ -43,8 +43,7 @@ namespace przychodnia
 
         private void buttonRaport_Click(object sender, EventArgs e)
         {
-            GenerowanieRaportu generowanie = new GenerowanieRaportu();
-            generowanie.ShowDialog();
+            
         }
     }
 }

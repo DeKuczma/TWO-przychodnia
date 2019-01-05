@@ -58,12 +58,6 @@
     <Compile Include="EdycjaWizyty.Designer.cs">
       <DependentUpon>EdycjaWizyty.cs</DependentUpon>
     </Compile>
-    <Compile Include="GenerowanieRaportu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GenerowanieRaportu.Designer.cs">
-      <DependentUpon>GenerowanieRaportu.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,9 +89,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EdycjaWizyty.resx">
       <DependentUpon>EdycjaWizyty.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GenerowanieRaportu.resx">
-      <DependentUpon>GenerowanieRaportu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
