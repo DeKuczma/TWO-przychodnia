@@ -1,2 +1,1 @@
-#Projekt na studia
-Prosta obsługa przychodni bazująca na bazie danych.
+Projekt prostej obsługi przychodni przy wykorzystaniu ADO.NET
