@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ICSharpCode.SharpZipLib.Zip;
 
 namespace przychodnia
 {
@@ -55,7 +56,7 @@ namespace przychodnia
                 {
                     sb.Append("\t<Deklaracja>\n\t\t<Pacjent>\n\t\t\t<Nazwisko>");
                     sb.Append(row[this.przychodniaDataSet.Pacjenci.NazwiskoColumn.ColumnName]);
-                    sb.Append("</Nazwisko>\n\t\t\t<Imona>");
+                    sb.Append("</Nazwisko>\n\t\t\t<Imiona>");
                     sb.Append(row[this.przychodniaDataSet.Pacjenci.ImionaColumn.ColumnName]);
                     sb.Append("</Imiona>\n\t\t\t<PESEL>");
                     sb.Append(row[przychodniaDataSet.Pacjenci.PESELColumn.ColumnName]);
@@ -80,7 +81,8 @@ namespace przychodnia
             }
             sb.Append("</Deklaracje>");
             string path = "Raport.xml";
-            File.WriteAllText(path, sb.ToString());
+            //File.WriteAllText(path, sb.ToString());
+            ZipFile(path, "Raport.zip", sb.ToString());
         }
 
         private bool GoodDeclaration(int IDPacient, out int IDLekarza, out string declarationData)
@@ -108,6 +110,26 @@ namespace przychodnia
             sb.Append("</NPWZ>\n\t\t\t<Data>");
             sb.Append(declarationData);
             sb.Append("</Data>\n");
+        }
+
+        private void ZipFile(string inputPath, string outputPath, string outputString)
+        {
+            using (FileStream fileOut = File.Create(outputPath))
+            {
+                using (ZipOutputStream zipOut = new ZipOutputStream(fileOut))
+                {
+                    zipOut.SetLevel(3);
+                    ZipEntry zipEntry = new ZipEntry("Raport.xml");
+                    zipEntry.DateTime = DateTime.UtcNow;
+                    zipOut.PutNextEntry(zipEntry);
+
+                    byte[] buffer = Encoding.UTF8.GetBytes(outputString);
+                    zipOut.Write(buffer, 0, buffer.Length);
+
+                    zipOut.IsStreamOwner = false;
+                    zipOut.Close();
+                }
+            }
         }
     }
 }
