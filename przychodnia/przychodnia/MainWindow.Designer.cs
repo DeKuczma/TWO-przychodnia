@@ -36,9 +36,10 @@
             this.buttonRaport = new System.Windows.Forms.Button();
             this.przychodniaDataSet = new przychodnia.PrzychodniaDataSet();
             this.pacjenciTableAdapter = new przychodnia.PrzychodniaDataSetTableAdapters.PacjenciTableAdapter();
-            this.wizytyTableAdapter = new przychodnia.PrzychodniaDataSetTableAdapters.WizytyTableAdapter();
             this.pacjenciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pacjenciDeklaracjeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lekarzeTableAdapter = new przychodnia.PrzychodniaDataSetTableAdapters.LekarzeTableAdapter();
+            this.deklaracjeTableAdapter = new przychodnia.PrzychodniaDataSetTableAdapters.DeklaracjeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacjenciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacjenciDeklaracjeBindingSource)).BeginInit();
@@ -103,10 +104,6 @@
             // 
             this.pacjenciTableAdapter.ClearBeforeFill = true;
             // 
-            // wizytyTableAdapter
-            // 
-            this.wizytyTableAdapter.ClearBeforeFill = true;
-            // 
             // pacjenciBindingSource
             // 
             this.pacjenciBindingSource.DataMember = "Pacjenci";
@@ -116,6 +113,14 @@
             // 
             this.pacjenciDeklaracjeBindingSource.DataMember = "PacjenciDeklaracje";
             this.pacjenciDeklaracjeBindingSource.DataSource = this.pacjenciBindingSource;
+            // 
+            // lekarzeTableAdapter
+            // 
+            this.lekarzeTableAdapter.ClearBeforeFill = true;
+            // 
+            // deklaracjeTableAdapter
+            // 
+            this.deklaracjeTableAdapter.ClearBeforeFill = true;
             // 
             // MainWindow
             // 
@@ -148,9 +153,10 @@
         private System.Windows.Forms.Button buttonRaport;
         private PrzychodniaDataSet przychodniaDataSet;
         private PrzychodniaDataSetTableAdapters.PacjenciTableAdapter pacjenciTableAdapter;
-        private PrzychodniaDataSetTableAdapters.WizytyTableAdapter wizytyTableAdapter;
         private System.Windows.Forms.BindingSource pacjenciBindingSource;
         private System.Windows.Forms.BindingSource pacjenciDeklaracjeBindingSource;
+        private PrzychodniaDataSetTableAdapters.LekarzeTableAdapter lekarzeTableAdapter;
+        private PrzychodniaDataSetTableAdapters.DeklaracjeTableAdapter deklaracjeTableAdapter;
     }
 }
 

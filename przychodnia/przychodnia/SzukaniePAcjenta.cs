@@ -29,6 +29,7 @@ namespace przychodnia
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
+            this.przychodniaDataSet.Deklaracje.RejectChanges();
             DataView dv = new DataView(this.przychodniaDataSet.Pacjenci);
             DataView viewDeklaracje = new DataView(this.przychodniaDataSet.Deklaracje);
             dv.RowFilter = this.przychodniaDataSet.Pacjenci.NazwiskoColumn.ColumnName+ " = '" + textNazwisko.Text + "' AND "

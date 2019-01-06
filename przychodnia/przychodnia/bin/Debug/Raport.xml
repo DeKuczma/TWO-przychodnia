@@ -1,0 +1,40 @@
+<Deklaracje>
+	<Deklaracja>
+		<Pacjent>
+			<Nazwisko>A</Nazwisko>
+			<Imona>A</Imiona>
+			<PESEL>1</PESEL>
+			<DataUrodzenia>02.01.2019 00:00:00</DataUrodzenia>
+			<Ubezpieczenie>1</Ubezpieczenie>
+			<Adres>
+				<Ulica>1</Ulica>
+				<NrDomu>1</NrDomu>
+				<NrMieszkania>1</NrMieszkania>
+				<Miasto>1</Miasto>
+				<Kod>1</Kod>
+			</Adres>
+		</Pacjent>
+		<Personel>
+			<NPWZ>1231</NPWZ>
+			<Data>11.01.1994</Data>
+		</Personel>
+	</Deklaracja>	<Deklaracja>
+		<Pacjent>
+			<Nazwisko>B</Nazwisko>
+			<Imona>B</Imiona>
+			<PESEL>1</PESEL>
+			<DataUrodzenia>16.01.2019 00:00:00</DataUrodzenia>
+			<Ubezpieczenie>1</Ubezpieczenie>
+			<Adres>
+				<Ulica>1</Ulica>
+				<NrDomu>1</NrDomu>
+				<NrMieszkania>1</NrMieszkania>
+				<Miasto>1</Miasto>
+				<Kod>1</Kod>
+			</Adres>
+		</Pacjent>
+		<Personel>
+			<NPWZ>1231</NPWZ>
+			<Data>26.01.2019</Data>
+		</Personel>
+	</Deklaracja></Deklaracje>

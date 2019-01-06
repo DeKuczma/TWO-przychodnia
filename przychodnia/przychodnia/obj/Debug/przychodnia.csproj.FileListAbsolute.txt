@@ -17,3 +17,7 @@ C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\b
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\bin\Debug\PrzychodniaDataSet.xsc
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\bin\Debug\PrzychodniaDataSet.xsd
 C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\bin\Debug\PrzychodniaDataSet.xss
+C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\Dawid\Desktop\TWO-przychodnia\TWO-przychodnia\przychodnia\przychodnia\obj\Debug\przychodnia.csproj.CopyComplete
