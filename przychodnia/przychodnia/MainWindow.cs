@@ -46,42 +46,44 @@ namespace przychodnia
         private void buttonRaport_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
+            sb.Append("<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n");
             sb.Append("<Deklaracje>\n");
             pacjenciTableAdapter.Fill(this.przychodniaDataSet.Pacjenci);
             deklaracjeTableAdapter.Fill(this.przychodniaDataSet.Deklaracje);
             lekarzeTableAdapter.Fill(this.przychodniaDataSet.Lekarze);
+            
             foreach(DataRow row in this.przychodniaDataSet.Pacjenci.Rows)
             {
                 if (GoodDeclaration((int)row[this.przychodniaDataSet.Pacjenci.IDColumn.ColumnName], out int IDLekarza, out string declarationData))
                 {
-                    sb.Append("\t<Deklaracja>\n\t\t<Pacjent>\n\t\t\t<Nazwisko>");
+                    sb.Append(" <Deklaracja>\n  <Pacjent>\n   <Nazwisko>");
                     sb.Append(row[this.przychodniaDataSet.Pacjenci.NazwiskoColumn.ColumnName]);
-                    sb.Append("</Nazwisko>\n\t\t\t<Imiona>");
+                    sb.Append("</Nazwisko>\n   <Imiona>");
                     sb.Append(row[this.przychodniaDataSet.Pacjenci.ImionaColumn.ColumnName]);
-                    sb.Append("</Imiona>\n\t\t\t<PESEL>");
+                    sb.Append("</Imiona>\n   <PESEL>");
                     sb.Append(row[przychodniaDataSet.Pacjenci.PESELColumn.ColumnName]);
-                    sb.Append("</PESEL>\n\t\t\t<DataUrodzenia>");
+                    sb.Append("</PESEL>\n   <DataUrodzenia>");
                     sb.Append(row[this.przychodniaDataSet.Pacjenci.DataUrodzeniaColumn.ColumnName]);
-                    sb.Append("</DataUrodzenia>\n\t\t\t<Ubezpieczenie>");
+                    sb.Append("</DataUrodzenia>\n   <Ubezpieczenie>");
                     sb.Append(row[this.przychodniaDataSet.Pacjenci.UbezpieczenieColumn.ColumnName]);
-                    sb.Append("</Ubezpieczenie>\n\t\t\t<Adres>\n\t\t\t\t<Ulica>");
+                    sb.Append("</Ubezpieczenie>\n   <Adres>\n   <Ulica>");
                     sb.Append(row[this.przychodniaDataSet.Pacjenci.UlicaColumn.ColumnName]);
-                    sb.Append("</Ulica>\n\t\t\t\t<NrDomu>");
+                    sb.Append("</Ulica>\n    <NrDomu>");
                     sb.Append(row[this.przychodniaDataSet.Pacjenci.NrDomuColumn.ColumnName]);
-                    sb.Append("</NrDomu>\n\t\t\t\t<NrMieszkania>");
+                    sb.Append("</NrDomu>\n    <NrMieszkania>");
                     sb.Append(row[this.przychodniaDataSet.Pacjenci.NrMieszkaniaColumn.ColumnName]);
-                    sb.Append("</NrMieszkania>\n\t\t\t\t<Miasto>");
+                    sb.Append("</NrMieszkania>\n    <Miasto>");
                     sb.Append(row[this.przychodniaDataSet.Pacjenci.MiastoColumn.ColumnName]);
-                    sb.Append("</Miasto>\n\t\t\t\t<Kod>");
+                    sb.Append("</Miasto>\n    <Kod>");
                     sb.Append(row[this.przychodniaDataSet.Pacjenci.KodColumn.ColumnName]);
-                    sb.Append("</Kod>\n\t\t\t</Adres>\n\t\t</Pacjent>\n\t\t<Personel>\n");
+                    sb.Append("</Kod>\n   </Adres>\n  </Pacjent>\n  <Personel>\n");
                     GetDoctorData(ref sb, IDLekarza, declarationData);
-                    sb.Append("\t\t</Personel>\n\t</Deklaracja>");
+                    sb.Append("  </Personel>\n </Deklaracja>");
                 }
             }
+
             sb.Append("</Deklaracje>");
             string path = "Raport.xml";
-            //File.WriteAllText(path, sb.ToString());
             ZipFile(path, "Raport.zip", sb.ToString());
         }
 
@@ -105,9 +107,9 @@ namespace przychodnia
         {
             DataView dv = new DataView(this.przychodniaDataSet.Lekarze);
             dv.RowFilter = this.przychodniaDataSet.Lekarze.IDColumn.ColumnName + "=" + IDLekarza;
-            sb.Append("\t\t\t<NPWZ>");
+            sb.Append("   <NPWZ>");
             sb.Append(dv[0][this.przychodniaDataSet.Lekarze.NPWZColumn.ColumnName]);
-            sb.Append("</NPWZ>\n\t\t\t<Data>");
+            sb.Append("</NPWZ>\n   <Data>");
             sb.Append(declarationData);
             sb.Append("</Data>\n");
         }
